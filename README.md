@@ -1,8 +1,19 @@
 # TaskFlow
 
-Full-stack task management application with JWT authentication, PostgreSQL persistence, and drag-and-drop task ordering. The codebase is organized as a TypeScript monorepo with dedicated `frontend`, `backend`, and `database` packages.
+A full-stack task management platform built with Next.js, Express, TypeScript, PostgreSQL, and Prisma.
 
-Developed with [Cursor](https://cursor.com).
+The project demonstrates modern software engineering practices including authentication, database design, API development, Dockerized local environments, and scalable monorepo architecture.
+
+This project was developed using an AI-assisted workflow with Cursor, while all architecture decisions, database schema design, API specifications, security implementation, and project structure were independently designed and validated.
+
+## Engineering Highlights
+
+- Designed JWT-based authentication and authorization flow
+- Implemented secure password hashing with bcrypt
+- Built type-safe backend APIs using TypeScript and Zod
+- Structured the project as a monorepo for scalability
+- Containerized local development with Docker
+- Applied security best practices using Helmet and CORS
 
 ## Project Structure
 
@@ -16,11 +27,11 @@ taskflow/
 
 ## Tech Stack
 
-| Layer    | Technology                          |
-| -------- | ----------------------------------- |
-| Frontend | Next.js 15, React 19, Tailwind CSS  |
-| Backend  | Express, TypeScript, JWT, bcrypt    |
-| Database | PostgreSQL, Prisma ORM              |
+| Layer    | Technology                           |
+| -------- | ------------------------------------ |
+| Frontend | Next.js 15, React 19, Tailwind CSS   |
+| Backend  | Express, TypeScript, JWT, bcrypt     |
+| Database | PostgreSQL, Prisma ORM               |
 | Auth     | Email/password with JWT bearer token |
 
 ## Features
@@ -71,23 +82,23 @@ npm run dev
 
 ## API Endpoints
 
-| Method | Path                | Auth | Description        |
-| ------ | ------------------- | ---- | ------------------ |
-| POST   | /api/auth/register  | No   | Create account     |
-| POST   | /api/auth/login     | No   | Sign in            |
-| GET    | /api/auth/me        | Yes  | Current user       |
-| GET    | /api/tasks          | Yes  | List user tasks    |
-| POST   | /api/tasks          | Yes  | Create task        |
-| PATCH  | /api/tasks/:id      | Yes  | Update task        |
-| DELETE | /api/tasks/:id      | Yes  | Delete task        |
-| PUT    | /api/tasks/reorder  | Yes  | Reorder by priority |
+| Method | Path               | Auth | Description         |
+| ------ | ------------------ | ---- | ------------------- |
+| POST   | /api/auth/register | No   | Create account      |
+| POST   | /api/auth/login    | No   | Sign in             |
+| GET    | /api/auth/me       | Yes  | Current user        |
+| GET    | /api/tasks         | Yes  | List user tasks     |
+| POST   | /api/tasks         | Yes  | Create task         |
+| PATCH  | /api/tasks/:id     | Yes  | Update task         |
+| DELETE | /api/tasks/:id     | Yes  | Delete task         |
+| PUT    | /api/tasks/reorder | Yes  | Reorder by priority |
 
 ## Roadmap
 
-| Phase | Scope | Status |
-| ----- | ----- | ------ |
-| 1 | Task management UI (CRUD, colors, due dates, drag reorder) | Completed |
-| 2 | User authentication and PostgreSQL persistence | Completed |
-| 3 | Products, orders, and admin panel | Planned |
-| 4 | Vercel deployment and custom domain | Planned |
-| 5 | Security hardening (input validation, XSS, SQL injection) | Planned |
+| Phase | Scope                                                        | Status    |
+| ----- | ------------------------------------------------------------ | --------- |
+| 1     | Task management UI (CRUD, colors, due dates, drag reorder)   | Completed |
+| 2     | User authentication and PostgreSQL persistence               | Completed |
+| 3     | Products, orders, and admin panel                            | Planned   |
+| 4     | Vercel deployment and custom domain                          | Planned   |
+| 5     | Security hardening (input validation, XSS, SQL injection)    | Planned   |
