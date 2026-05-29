@@ -38,6 +38,9 @@ frontend/.env.local
 # vercel
 .vercel
 
+# cursor (local IDE config — not shared)
+.cursor/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
