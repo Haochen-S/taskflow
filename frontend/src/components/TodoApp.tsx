@@ -202,9 +202,6 @@ export function TodoApp() {
         <header className="mb-8">
           <div className="flex items-center justify-between">
             <div>
-              <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
-                Step 2 · Auth & Database
-              </div>
               <h1 className="text-3xl font-bold tracking-tight text-slate-900">TaskFlow</h1>
               <p className="mt-1 text-sm text-slate-500">
                 Signed in as {user?.name ?? user?.email}

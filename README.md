@@ -1,8 +1,8 @@
 # TaskFlow
 
-> This is my first project built with Cursor as a coding assistant. From the Todo app to user auth, a split frontend/backend setup, and PostgreSQL, each step was done with AI pair programming. The documentation below is in English for client-facing use.
+Full-stack task management application with JWT authentication, PostgreSQL persistence, and drag-and-drop task ordering. The codebase is organized as a TypeScript monorepo with dedicated `frontend`, `backend`, and `database` packages.
 
-Full-stack task management system with user authentication and PostgreSQL persistence.
+Developed with [Cursor](https://cursor.com).
 
 ## Project Structure
 
@@ -23,12 +23,12 @@ taskflow/
 | Database | PostgreSQL, Prisma ORM              |
 | Auth     | Email/password with JWT bearer token |
 
-## Features (Step 2)
+## Features
 
 - User registration and login
 - JWT-protected API routes
 - Per-user task storage in PostgreSQL
-- Task CRUD with color, due date, completion
+- Task CRUD with color, due date, and completion status
 - Drag-and-drop priority reordering
 - Sort by priority or due date
 
@@ -84,8 +84,10 @@ npm run dev
 
 ## Roadmap
 
-1. Todo App — done
-2. User login + PostgreSQL — **current**
-3. Products / orders / admin panel
-4. Deploy to Vercel + custom domain
-5. Security hardening (validation, XSS, SQL injection)
+| Phase | Scope | Status |
+| ----- | ----- | ------ |
+| 1 | Task management UI (CRUD, colors, due dates, drag reorder) | Completed |
+| 2 | User authentication and PostgreSQL persistence | Completed |
+| 3 | Products, orders, and admin panel | Planned |
+| 4 | Vercel deployment and custom domain | Planned |
+| 5 | Security hardening (input validation, XSS, SQL injection) | Planned |
