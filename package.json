@@ -1,0 +1,23 @@
+{
+  "name": "taskflow",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "database"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev -w @taskflow/backend\" \"npm run dev -w @taskflow/frontend\"",
+    "dev:frontend": "npm run dev -w @taskflow/frontend",
+    "dev:backend": "npm run dev -w @taskflow/backend",
+    "build": "npm run generate -w @taskflow/database && npm run build -w @taskflow/backend && npm run build -w @taskflow/frontend",
+    "db:generate": "npm run generate -w @taskflow/database",
+    "db:push": "npm run push -w @taskflow/database",
+    "db:migrate": "npm run migrate -w @taskflow/database",
+    "db:studio": "npm run studio -w @taskflow/database"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
