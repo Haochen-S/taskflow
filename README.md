@@ -1,5 +1,7 @@
 # TaskFlow
 
+> This is my first project built with Cursor as a coding assistant. From the Todo app to user auth, a split frontend/backend setup, and PostgreSQL, each step was done with AI pair programming. The documentation below is in English for client-facing use.
+
 Full-stack task management system with user authentication and PostgreSQL persistence.
 
 ## Project Structure
